@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     @book.save
-    redirect_to "/books/1" #idの指定方法がわからない
+    redirect_to "/books/#{@book.id}"
   end
   
   def show
